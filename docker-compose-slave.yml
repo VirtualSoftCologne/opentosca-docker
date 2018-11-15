@@ -18,8 +18,8 @@ services:
       CONTAINER_DEPLOYMENT_TESTS: 'false'
       CONTAINER_JAVA_OPTS: ''
       COLLABORATION_MODE: 'true'
-      COLLABORATION_MASTER_HOSTNAME: '81.14.203.213'
-      COLLABORATION_MASTER_PORT: '1883'
+      COLLABORATION_HOSTNAMES: '81.14.203.213'
+      COLLABORATION_PORTS: '1883'
     networks:
       - opentosca
   container-repository:
@@ -42,7 +42,6 @@ services:
     image: opentosca/engine-ia
     ports:
       - '8090:8080'
-      - '1883:1883' # MQTT
     networks:
       - opentosca
   winery:
